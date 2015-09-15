@@ -1,0 +1,46 @@
+{
+  "name": "openentry_web-client",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "browserify -e src/index.jsx -o static/output/bundle.js",
+    "build:css": "echo -e \"warning: \\033[0;33m empty script \\033[0m\"",
+    "build": "npm run build:js && npm run build:css",
+    "watch:js": "watchify -vd -e src/index.jsx -o static/output/bundle.js",
+    "watch:css": "echo -e \"warning: \\033[0;33m empty script \\033[0m\"",
+    "watch": "npm run watch:js & npm run watch:css",
+    "browser": "browser-sync start --server static --files \"static/*.html, static/output/*.js, static/css/*.css\"",
+    "prebuild:js": "mkdir -p static/output",
+    "prebuild:css": "mkdir -p static/output",
+    "prewatch:js": "mkdir -p static/output",
+    "prewatch:css": "mkdir -p static/output"
+  },
+  "author": "Samuel El-Borai <samuel.elborai@gmail.com> (https://github.com/dgellow)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dgellow/openentry_web-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dgellow/openentry_web-client/issues"
+  },
+  "homepage": "https://github.com/dgellow/openentry_web-client",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browser-sync": "^2.9.3",
+    "browserify": "^11.1.0",
+    "watchify": "^3.4.0"
+  },
+  "dependencies": {
+    "js-csp": "^0.5.0",
+    "react": "^0.13.3",
+    "react-router": "^1.0.0-rc1"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }
+}

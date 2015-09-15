@@ -1,0 +1,3 @@
+node_modules
+static/output
+config/local.js
