@@ -1,12 +1,12 @@
 # OpenEntry web client
 
 There isn't much yet.
-
+Originally cloned from [dgellow's repo](https://github.com/dgellow/openentry_web-client).
 ## Development
 
 ```
 # Clone the repo
-git clone git@github.com:dgellow/openentry_web-client.git
+
 cd openentry_web-client
 
 # Install dependencies
